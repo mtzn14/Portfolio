@@ -44,6 +44,7 @@ header{
     background-size:5px 5px;
     cursor: pointer;
     transition: 0.9s ease;
+    box-shadow: 10px 5px 5px #b74b4b;
 }
 
 h1.projo{
@@ -56,6 +57,11 @@ h1.projo{
 .logo:hover{
     transform: scale(1.1);
 }
+
+.me{
+    box-shadow: -6px -6px #b74b4b;
+}
+
 header {background-color: white;}
 nav a {
     font-size: 1.8rem;
