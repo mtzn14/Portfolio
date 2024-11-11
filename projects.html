@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projects</title>
+</head>
+<body>
+    <header>
+        <img src="images/logozu.PNG" class="logo">
+        <nav>
+            <a href="index.html">Profile</a>
+            <a href="#">Skills</a>
+            <a href="projects.html" class="active">Projects</a>
+        </nav>
+    </header>
+    <section class="projects">
+        <h1 class="projo">My Projects</h1>
+    
+        
+        <div class="project flex-container">
+            <h2 class="cursor typewriter-animation">Gastronomy Blog sample</h2>
+            <div class="slideshow" id="gastronomy-slideshow">
+                <img src="images/main1.PNG" alt="Slide 1">
+                <img src="images/main2.PNG" alt="Slide 2">
+                <img src="images/main3.png" alt="Slide 3">
+                <img src="images/main4.png" alt="Slide 4">
+                <img src="images/recipes1.PNG" alt="Slide 5">
+                <img src="images/recipes2.PNG" alt="Slide 6">
+                <img src="images/recipes3.PNG" alt="Slide 7">
+            </div>
+        </div>
+    
+        <!-- Project 2: VR Game Room -->
+        <div class="project flex-container">
+            <h2 class="cursor typewriter-animation">VR Game Room sample website</h2>
+            <div class="slideshow" id="vr-slideshow">
+                <img src="images/vr1.png" alt="VR Slide 1">
+                <img src="images/vr2.png" alt="VR Slide 2">
+                <img src="images/vr3.png" alt="VR Slide 3">
+                <img src="images/services1.PNG" alt="VR Slide 4">
+                <img src="images/services2.PNG" alt="VR Slide 5">
+                <img src="images/services3.PNG" alt="VR Slide 6">
+                <img src="images/location.PNG" alt="VR Slide 7">
+            </div>
+        </div>
+    
+
+        <div class="project flex-container">
+            <h2 class="cursor typewriter-animation">Vinum Academicum Promo video</h2>
+            <video id="vinum-video" controls>
+                <source src="videos/Vinum_Academicum.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    
+
+    <script>
+        // Function to start slideshow automatically
+        function startSlideshow(projectId) {
+            const slides = document.querySelectorAll(`#${projectId}-slideshow img`);
+            let index = 0;
+
+            // Show the first image initially
+            slides.forEach((slide, i) => slide.style.display = i === 0 ? 'block' : 'none');
+
+            setInterval(() => {
+                slides[index].style.display = 'none'; // Hide the current slide
+                index = (index + 1) % slides.length;   // Move to the next slide
+                slides[index].style.display = 'block'; // Show the next slide
+            }, 2000); // Change slide every 2 seconds
+        }
+
+        // Start slideshows automatically on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            startSlideshow('gastronomy');
+            startSlideshow('vr');
+        });
+    </script>
+</body>
+</html>
