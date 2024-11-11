@@ -56,10 +56,10 @@ h1.projo{
 .logo:hover{
     transform: scale(1.1);
 }
-
-nav a{
+header {background-color: white;}
+nav a {
     font-size: 1.8rem;
-    color: white;
+    color: #b74b4b;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
@@ -67,10 +67,65 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
+
+/* Styling for Menu Icon */
+#menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: #b74b4b;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+/* Hide Navbar when scrolled */
+#navbar {
+    transition: opacity 0.3s ease;
+}
+
+#navbar.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    #navbar {
+        display: none; /* Hide the navbar by default on small screens */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #e70000;
+        padding: 2rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #navbar.show {
+        display: flex; /* Show when triggered */
+    }
+
+    nav a {
+        margin: 1rem 0;
+    }
+}
+#header.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
 
 @media(max-width:995px){
     nav{

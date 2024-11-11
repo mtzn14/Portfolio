@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="JavaScript" href="script.js">
     <title>Projects</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <img src="images/logozu.PNG" class="logo">
-        <nav>
+        <nav id="navbar">
             <a href="index.html">Profile</a>
-            <a href="#">Skills</a>
+
             <a href="projects.html" class="active">Projects</a>
         </nav>
+        <div id="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     <section class="projects">
         <h1 class="projo">My Projects</h1>
@@ -78,6 +80,29 @@
             startSlideshow('gastronomy');
             startSlideshow('vr');
         });
+
+
+        let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        header.classList.add('hidden');
+    } else {
+        // Scrolling up
+        header.classList.remove('hidden');
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative scroll
+});
+
+function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('show');
+}
+
     </script>
 </body>
 </html>
