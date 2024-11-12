@@ -46,10 +46,9 @@ header{
 }
 
 .logo{
-    height: 9rem;
-    width: 9rem;
+    height: 5rem;
+    width: 7rem;
     border-radius: 90%;
-    margin:auto;
     cursor: pointer;
     transition: 0.9s ease;
     
