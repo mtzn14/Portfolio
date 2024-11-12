@@ -43,7 +43,7 @@ header{
     height: 9rem;
     width: 9rem;
     border-radius: 90%;
-    margin: 0 auto;
+    margin:auto;
     cursor: pointer;
     transition: 0.9s ease;
     
@@ -64,8 +64,7 @@ h1.projo{
     box-shadow: -6px -6px #b74b4b;
 }
 
-nav {
-    margin-left: auto;}
+
 
 nav a {
     font-size: 1.8rem;
@@ -108,6 +107,17 @@ nav a.active {
     #menu-icon {
         display: block;
     }
+    
+    .me {
+        max-width: 250px;
+        max-height: 250px;
+        
+    }
+
+    h1{
+        font-size: 10px;
+    }
+
 
     #navbar {
         display: none; /* Hide the navbar by default on small screens */
@@ -124,6 +134,17 @@ nav a.active {
 
     h2.cursor.typewriter-animation{
         font-size: 10px;
+    }
+
+    .typing-text span::after{
+        content: "";
+        background-color: black;
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid black;
+        right: -10;
+        animation: cursor 0.6s infinite;
     }
 
     video {
@@ -149,6 +170,21 @@ nav a.active {
 
 
 @media(max-width:995px){
+
+
+    h1 {
+        font-size: 25px !important;
+    }
+
+    h3 {
+        font-size: 15px !important;
+        padding-top: 5%;
+        padding-bottom: 0;
+    }
+
+   
+
+   
 
     .me {
         height: 65rem;
@@ -320,16 +356,12 @@ span{
         margin: 5rem 4rem;
     }
 
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
+ 
 
-    .home-content h1{
-        font-size: 5rem;
-    }
+    
 
     .home-img img{
-        width: 70vw;
+        width: 100vw;
         margin-top: 4rem;
         
     }
