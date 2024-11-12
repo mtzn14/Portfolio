@@ -10,12 +10,13 @@
 </head>
 <body> 
     <header>
-        <img src="images/logozu.png" class="logo">
+        <img src="images/logzu1.png" class="logo">
 
-       <nav>
+       <nav id="navbar">
         <a href="#" class="active">Profile</a>
         <a href="projects.html" >Projects</a>
        </nav>
+       <div id="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     <section class="home">
         <div class="home-img">
@@ -39,4 +40,31 @@
         </div>
     </section>
 </body>
+
+<script>
+  
+
+
+    let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+const header = document.getElementById('header');
+const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    header.classList.add('hidden');
+} else {
+    // Scrolling up
+    header.classList.remove('hidden');
+}
+lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative scroll
+});
+
+function toggleMenu() {
+const navbar = document.getElementById('navbar');
+navbar.classList.toggle('show');
+}
+
+</script>
 </html>
