@@ -58,7 +58,10 @@ h1.projo{
     color: black;
     margin-top: 90px;
     font-size: 40px;
+    
+
 }
+
 
 
 .logo:hover{
@@ -174,7 +177,7 @@ nav a.active {
 }
 
 
-@media(max-width:995px){
+@media(max-width:1000px){
 
 
     h1 {
@@ -192,17 +195,45 @@ nav a.active {
         margin: 5rem 4rem;
     }
 
-    .home-img img{
-        width: 100vw;
-        margin-top: 4rem;
-        
-    }
-
 
     .me {
-        height: 65rem;
-        width: 20rem;
+            max-width: 250px;
+            max-height: 250px;
+            
+        
     }
+    
+
+    
+    
+
+   
+    div#menu-icon {
+        margin-top: 27px;
+        margin-right: 10px;
+    }
+   
+    img.me {
+        height: 260px;
+        width: 200px !important;
+        margin-top: 40px;
+    }
+    
+    h2.cursor.typewriter-animation{
+        margin-top: -200px;
+    }
+    
+    html body section.projects div.project.flex-container div#gastronomy-slideshow.slideshow img {
+        height: 100%;
+        width: 100% !important;
+    }
+
+    .typing-text span::after{
+        
+        width: 0px!important;
+        height: 0px !important;
+        
+
     nav{
         position: absolute;
         display: none;
@@ -233,7 +264,7 @@ nav a.active {
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #b74b4b;
     }
-}
+}}
 
 section{
     min-height: 100vh;
@@ -309,27 +340,6 @@ span{
     font-weight: 500;
 }
 
-.social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border: 0.2rem solid black;
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: black;
-}
-
-.social-icons a:hover{
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: #b74b4b;
-    box-shadow: 0  0 25px #b74b4b;
-}
 
 
 
@@ -379,21 +389,16 @@ span{
    
 }
 
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem;
-    }
-}
 
 
     
 
-/* Flex container for side-by-side layout */
+
 .flex-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between title and content */
-    margin-bottom: 30px; /* Space between projects */
+    gap: 20px; 
+    margin-bottom: 30px; 
 }
 
   
@@ -407,7 +412,7 @@ span{
     overflow: hidden;
     transform: translateY(-50%);    
 }
-/* Animation */
+
 .typewriter-animation {
   animation: 
     typewriter 5s steps(50) 1s 1 normal both, 
@@ -425,7 +430,7 @@ span{
 
 
 .project-title {
-    min-width: 150px; /* Width for title area */
+    min-width: 150px;
     text-align: left;
 }
 
@@ -433,13 +438,13 @@ span{
 .slideshow {
     position: relative;
     width: 100%;  
-    max-width: 700px; /* Increased max-width for larger slideshow */
-    height: 450px;    /* Increased height for larger slideshow */
+    max-width: 700px;
+    height: 450px;    
     margin: auto;
     overflow: hidden;
 }
 
-/* Center the images fully within the slideshow */
+
 .slideshow img {
     position: absolute;
     top: 0;
@@ -449,9 +454,9 @@ span{
     object-fit: contain;
 }
 
-/* Center the video */
+
 video {
-    max-width: 690px; /* Increase video width for a balanced look */
+    max-width: 690px; 
     height: auto;
     margin: auto;
 }
@@ -466,24 +471,3 @@ video {
     font-size: 20px;
     color: black;
 }
-
-
-.timeline-section h2 {
-    color: black;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.timeline-section ul.list {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    font-size: 1.6rem;
-}
-
-.timeline-section ul.list li {
-    margin: 1rem 0;
-    font-weight: 400;
-}
-
